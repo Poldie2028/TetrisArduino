@@ -88,11 +88,12 @@ Im nächsten Schritt werden die Bewegungsdaten genutzt um ein Model zu trainiere
 Alternativ ist das komplette JupyterNotebook auch im Ordner "JupyterNotebookModelTraining" zu finden und kann dort ausgeführt werden.
 
 <!-- [test](https://colab.research.google.com/drive/1sNWiaqv_-ZADRAdhQ7d07oLNPb7_QmLa) -->
+<!-- https://colab.research.google.com/github/Poldie2023/TetrisArduino/tree/main/JupyterNotebookModelTraining/ArduinoModel.ipynb -->
 
 In Google Collan werden Sie dann durch die folgenden Schritte geleitet:
 - Python Umgebung aufbauen und die nötigen Abhängigkeiten installieren
 - Hochladen der csv-dateien
-- möglicherweise den Namen des Bewegungen anpassen im "GESTURES"-Array
+- möglicherweise müssen die Namen der Bewegungen angepasst werden im "GESTURES"-Array
 ![GesturesArray](readme_files/Gestures_Screenshot.png)
 - Bewegungsdaten parsen und vorbereiten als neuronales Netz
 - Model aufbauen und trainieren mit getrenntem Test- und Trainingsdatensatz
@@ -101,7 +102,18 @@ In Google Collan werden Sie dann durch die folgenden Schritte geleitet:
 
 
 ## 5. Bewegungserkennung
+Nun haben wir ein fertig trainiertes Model, was für die Bewegungserkennung verwendet werden kann. Dafür brauchen wir einen neuen Sketch für die Arduino IDE und müssen das Model dort miteinbinden. Den Code für den neuen Sketch finden Sie im Ordner "MovementClassifier" unter der gleichnamigen Datei. Diese können Sie entweder als neuen Sketch hochladen oder den Code einfach kopieren und einfügen.
 
+- Als nächstes öffnen Sie einen neuen Tab in der IDE (Bei Nachfragen nennen Sie den Tab am besten direkt "model.h")
+SCREENSHOT
+- Öffnen Sie den neuen Tab, kopieren sie alles aus der heruntergeladenen "model.h"-Datei und fügen Sie es in den Tab ein
+- Dann können Sie den Sketch auf das Arduinoboard laden (Sketch > Upload)
+- Öffnen Sie auch den Serial Monitor (Tools > Serial Monitor)
+- Nun können Sie einige Bewegungen ausführen und im Monitor idealerweise die richtige Bewegung sehen
+- (optional) Sie können auch folgenden Code auskommentieren, dann wird Ihnen zusaätzlich zur erkannten Bewegung auch die prozentuelle Übereinstimmung ermittelt
+![ClassifierPercentage](readme_files/Classifier_Screenshot.png)
+
+Allerdings können in der Arduino IDE leider keine Tastenbefehle zugewiesen werden aus verschiedenen Gründen, welche im Kapitel 7. Troubleshooting näher beschrieben sind. Deshalb ist ein Workaround nötig, welcher im folgenden Kapitel beschrieben ist.
 
 
 ## 6. Tastenzuweisung
