@@ -15,6 +15,7 @@ Projekt mit dem Arduino Nano BLE Sense, um Tetris im Browser mit Bewegungsteueru
 ## 1. Vorbereitung der Arduino IDE
 Das Projekt wurde mit einem [Arduino Nano 33 BLE Sense](https://docs.arduino.cc/hardware/nano-33-ble-sense) durchgeführt.
 Bevor mit dem Projekt begonnen werden kann, muss jedoch zunächst die Arduino IDE heruntergeladen und eingerichtet werden.
+
 Dafür folgen Sie einfach den nachfolgenden Schritten:
 - Downloade und installiere die Arduino IDE [hier](https://arduino.cc/downloads)
 - Öffne die soeben installierte IDE
@@ -33,19 +34,21 @@ Nun haben Sie die Vorbereitungen abgeschlossen und können mit dem Projekt fortf
 Sollten Sie Probleme bei der Einrichtung haben können die folgenden Links möglicherweise weiterhelfen: [Getting Started](https://docs.arduino.cc/software/ide-v1/tutorials/getting-started/cores/arduino-mbed_nano) oder [Troubleshooting](https://support.arduino.cc/hc/en-us)
 
 ## 2. Planung Bewegung
-Zuerst muss geplant werden, welche Bewegungen für Tetris nötig sind. Es muss eine Möglichkeit geben den Block nach links und rechts zu bewegen, sowie ihn nach links und rechts zu rotieren. Optionale bietet Tetris oft die Möglichkeit den Block sofort an die derzeitige Stelle nach unten zu bewegen und einen Block für später zu speichern. Allen Steuerungsmöglichkeiten muss im nächsten Schritt eine Bewegung zugeordnet werden. Dabei ist zu beachten, dass die Bewegungen möglichst gut voneinander unterschieden werden können. Geplant sind folgende Bewegungen
+Zuerst muss geplant werden, welche Bewegungen für Tetris nötig sind. Es muss eine Möglichkeit geben den Block nach links und rechts zu bewegen, sowie ihn nach links und rechts zu rotieren. Optionale bietet Tetris oft die Möglichkeit den Block sofort an die derzeitige Stelle nach unten zu bewegen und einen Block für später zu speichern. Allen Steuerungsmöglichkeiten muss im nächsten Schritt eine Bewegung zugeordnet werden. Dabei ist zu beachten, dass die Bewegungen möglichst gut voneinander unterschieden werden können.
 
-Block nach links bewegen = Hand nach links bewegen
+ Geplant sind folgende Bewegungen:
 
-Block nach rechts bewegen = Hand nach rechts bewegen
+Block nach links bewegen => Hand nach links bewegen
 
-Block nach links rotieren = Hand nach links drehen
+Block nach rechts bewegen => Hand nach rechts bewegen
 
-Block nach rechts rotieren = Hand nach rechts drehen
+Block nach links rotieren => Hand nach links drehen
 
-Block nach unten bewegen = Hand nach unten bewegen
+Block nach rechts rotieren => Hand nach rechts drehen
 
-Block für später speichern = Hand nach oben bewegen
+Block nach unten bewegen => Hand nach unten bewegen
+
+Block für später speichern => Hand nach oben bewegen
 
 
 ## 3. Bewegung aufnehmen
@@ -82,11 +85,15 @@ Nachdem Sie alle Bewegung aufgenommen und die csv dateien abgespeichert haben, f
 ## 4. Bewegungsdaten trainieren
 Im nächsten Schritt werden die Bewegungsdaten genutzt um ein Model zu trainieren, welches danach genutzt wird um die Bewegunen zu erkennen und eine Steuerung zuzuweisen. Dafür kann ein bereits erstelltes Jupyter Notebook in Google Collab genutzt werden, welches [hier](https://colab.research.google.com/github/arduino/ArduinoTensorFlowLiteTutorials/blob/master/GestureToEmoji/arduino_tinyml_workshop.ipynb) aufgerufen werden kann. Mithilfe von diesem Notebook kann das TensorFlow Training im Browser durchgeführt werden. 
 
-[test](https://colab.research.google.com/drive/1sNWiaqv_-ZADRAdhQ7d07oLNPb7_QmLa)
+Alternativ ist das komplette JupyterNotebook auch im Ordner "JupyterNotebookModelTraining" zu finden und kann dort ausgeführt werden.
+
+<!-- [test](https://colab.research.google.com/drive/1sNWiaqv_-ZADRAdhQ7d07oLNPb7_QmLa) -->
 
 In Google Collan werden Sie dann durch die folgenden Schritte geleitet:
 - Python Umgebung aufbauen und die nötigen Abhängigkeiten installieren
 - Hochladen der csv-dateien
+- möglicherweise den Namen des Bewegungen anpassen im "GESTURES"-Array
+![GesturesArray](readme_files/Gestures_Screenshot.png)
 - Bewegungsdaten parsen und vorbereiten als neuronales Netz
 - Model aufbauen und trainieren mit getrenntem Test- und Trainingsdatensatz
 - fertig trainiertes Model zu TensorFlow Lite konvertieren
@@ -94,6 +101,7 @@ In Google Collan werden Sie dann durch die folgenden Schritte geleitet:
 
 
 ## 5. Bewegungserkennung
+
 
 
 ## 6. Tastenzuweisung
