@@ -90,12 +90,9 @@ Nachdem Sie alle Bewegung aufgenommen und die csv dateien abgespeichert haben, f
 
 
 ## 4. Bewegungsdaten trainieren
-Im nächsten Schritt werden die Bewegungsdaten genutzt um ein Model zu trainieren, welches danach genutzt wird um die Bewegunen zu erkennen und eine Steuerung zuzuweisen. Dafür kann ein bereits erstelltes Jupyter Notebook in Google Collab genutzt werden, welches [hier](https://colab.research.google.com/github/arduino/ArduinoTensorFlowLiteTutorials/blob/master/GestureToEmoji/arduino_tinyml_workshop.ipynb) aufgerufen werden kann. Mithilfe von diesem Notebook kann das TensorFlow Training im Browser durchgeführt werden. 
+Im nächsten Schritt werden die Bewegungsdaten genutzt um ein Model zu trainieren, welches danach genutzt wird um die Bewegunen zu erkennen und eine Steuerung zuzuweisen. Dafür kann ein bereits erstelltes Jupyter Notebook in Google Collab genutzt werden, welches [hier](https://colab.research.google.com/github/Poldie2028/TetrisArduino/blob/master/JupyterNotebookModelTraining/ArduinoModel.ipynb) aufgerufen werden kann. Mithilfe von diesem Notebook kann das TensorFlow Training im Browser durchgeführt werden. 
 
 Alternativ ist das komplette JupyterNotebook auch im Ordner "JupyterNotebookModelTraining" zu finden und kann dort ausgeführt werden.
-
-<!-- [test](https://colab.research.google.com/drive/1sNWiaqv_-ZADRAdhQ7d07oLNPb7_QmLa) -->
-<!-- https://colab.research.google.com/github/Poldie2023/TetrisArduino/tree/main/JupyterNotebookModelTraining/ArduinoModel.ipynb -->
 
 In Google Collan werden Sie dann durch die folgenden Schritte geleitet:
 - Python Umgebung aufbauen und die nötigen Abhängigkeiten installieren
