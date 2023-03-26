@@ -1,5 +1,10 @@
 # TetrisArduino
-Projekt mit dem Arduino Nano BLE Sense, um Tetris im Browser mit Bewegungsteuerung spielen zu können
+Am 21. April 1989 wurde in Japan der erste Gameboy veröffentlicht. Damals wurde der Gameboy auch nur zusammen mit dem Spiel TETRIS angeboten. Das führte dazu, dass bis heute TETRIS das meistverkaufte Spiel ist. 
+![Gameboy](readme_files/Gameboy1.png)
+Allerdings war TETRIS, obwohl es nur schwarz-weiß war in den neunziger Jahren unglaublich beliebt. 
+![Tetris](readme_files/Tetris1.png)
+Heutzutage spielen nur noch sehr wenige Kinder TETRIS. Deshalb haben wir uns überlegt, TETRIS zu updaten um es wieder attraktiver werden zu lassen. Unsere Idee war, TETRIS über Handbewegungen mit einem Arduino Nano 33 BLE Sense zu steuern. Wie das genau aussehen soll, ist in dem folgenden Video zu sehen. 
+![Gameplay](readme_files/Gameplay.mp4)
 
 ## Gliederung
 1. Vorbereitung der Arduino IDE
