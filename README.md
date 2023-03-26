@@ -29,11 +29,13 @@ Dafür folgen Sie einfach den nachfolgenden Schritten:
 - Board Manager öffnen (Tools > Board > Boards Manager...)
 - Suchen und installieren Sie "Nano BLE" 
 - Die Installation kann mehrere Minuten in Anspruch nehmen
+
 ![BoardsManager](readme_files/BoardsManager.png)
 - Nach Abschluss der Installation kann das Boards Manager Fenster geschlossen werden
 - Nun navigieren Sie zu Library Manager (Tools > Manage Libraries...)
 - Suchen und installieren Sie die "Arduino_TensorFlowLite" Bibliothek
 - Sollte Ihnen keine Bibliothek mit dem Namen angezeigt werden können Sie auch die beiden Libraries aus dem folgenden Screenshot installieren
+
 ![TroubleLibraries](readme_files/TroubleLibraries.png)
 - Suchen und installieren Sie die "Arduino_LSM9DS1" Bibliothek
 - Als nächstes können Sie ihr Arduino Board mithilfe von einem Micro USB Kabel mit Ihrem Computer verbinden
@@ -88,6 +90,7 @@ Nun müssen die Bewegungen aufgenommen werden, um im nächsten Schritt zu einem 
 - Wiederholen Sie die Bewegung mehrmals, damit später ein genaues Model trainiert werden kann (Im Optimalfall mindestens 10 mal)
 - Erstellen Sie eine neue Textdatei namens "Bewegungsname.csv" und kopieren Sie alle erfassten Bewegungsdaten rein
 - Die erste Zeile der csv Datei muss dabei wie folgt aussehen: "aX,aY,aZ,gX,gY,gZ"
+
 ![csvExample](readme_files/csvExample.png)
 - Leeren Sie den Serial Monitor und wiederholen Sie diesen Vorgang mit allen Bewegungen
 
@@ -103,6 +106,7 @@ In Google Collan werden Sie dann durch die folgenden Schritte geleitet:
 - Python Umgebung aufbauen und die nötigen Abhängigkeiten installieren
 - Hochladen der csv-dateien
 - Möglicherweise müssen die Namen der Bewegungen angepasst werden im "GESTURES"-Array
+
 ![GesturesArray](readme_files/Gestures_Screenshot.png)
 - Bewegungsdaten parsen und vorbereiten als neuronales Netz
 - Model aufbauen und trainieren mit getrenntem Test- und Trainingsdatensatz
@@ -120,6 +124,7 @@ SCREENSHOT
 - Öffnen Sie auch den Serial Monitor (Tools > Serial Monitor)
 - Nun können Sie einige Bewegungen ausführen und im Monitor idealerweise die richtige Bewegung sehen
 - (optional) Sie können auch folgenden Code auskommentieren, dann wird Ihnen zusaätzlich zur erkannten Bewegung auch die prozentuelle Übereinstimmung ermittelt
+
 ![ClassifierPercentage](readme_files/Classifier_Screenshot.png)
 
 Allerdings können in der Arduino IDE leider keine Tastenbefehle zugewiesen werden aus verschiedenen Gründen, welche im Kapitel 7. Troubleshooting näher beschrieben sind. Deshalb ist ein Workaround nötig, welcher im folgenden Kapitel beschrieben ist.
