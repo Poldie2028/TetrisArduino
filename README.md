@@ -29,9 +29,12 @@ Dafür folgen Sie einfach den nachfolgenden Schritten:
 - Board Manager öffnen (Tools > Board > Boards Manager...)
 - Suchen und installieren Sie "Nano BLE" 
 - Die Installation kann mehrere Minuten in Anspruch nehmen
+![BoardsManager](readme_files/BoardsManager.png)
 - Nach Abschluss der Installation kann das Boards Manager Fenster geschlossen werden
 - Nun navigieren Sie zu Library Manager (Tools > Manage Libraries...)
 - Suchen und installieren Sie die "Arduino_TensorFlowLite" Bibliothek
+- Sollte Ihnen keine Bibliothek mit dem Namen angezeigt werden können Sie auch die beiden Libraries aus dem folgenden Screenshot installieren
+![TroubleLibraries](readme_files/TroubleLibraries.png)
 - Suchen und installieren Sie die "Arduino_LSM9DS1" Bibliothek
 - Als nächstes können Sie ihr Arduino Board mithilfe von einem Micro USB Kabel mit Ihrem Computer verbinden
 - Wählen Sie das Board (Tools > Board > Arduino 33 BLE)
@@ -85,6 +88,7 @@ Nun müssen die Bewegungen aufgenommen werden, um im nächsten Schritt zu einem 
 - Wiederholen Sie die Bewegung mehrmals, damit später ein genaues Model trainiert werden kann (Im Optimalfall mindestens 10 mal)
 - Erstellen Sie eine neue Textdatei namens "Bewegungsname.csv" und kopieren Sie alle erfassten Bewegungsdaten rein
 - Die erste Zeile der csv Datei muss dabei wie folgt aussehen: "aX,aY,aZ,gX,gY,gZ"
+![csvExample](readme_files/csvExample.png)
 - Leeren Sie den Serial Monitor und wiederholen Sie diesen Vorgang mit allen Bewegungen
 
 Nachdem Sie alle Bewegung aufgenommen und die csv Dateien abgespeichert haben, fahren Sie mit dem nächsten Kapitel fort.
