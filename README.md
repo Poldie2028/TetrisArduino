@@ -122,7 +122,21 @@ Allerdings können in der Arduino IDE leider keine Tastenbefehle zugewiesen werd
 
 
 ## 6. Tastenzuweisung
-Dieser Code dient im Allgemeinen dazu, serielle Daten, die von einem externen Gerät (in diesem Fall einem Arduino) gesendet werden, zu lesen und basierend auf diesen Daten Tastendrücke auf der Tastatur des Computers zu simulieren. Der Code wurde speziell für das Spiel TETRIS entwickelt und kann verwendet werden, um den Spielstein in verschiedene Richtungen zu bewegen und fallen zu lassen. Das Programm kann als Beispiel für die Verwendung von seriellen Schnittstellen und die Interaktion zwischen verschiedenen Geräten dienen, um bestimmte Aktionen auszuführen.
+Um den Zeitrahmen von 2 Wochen für das Projekt nicht zu überreizen, haben wir versucht einen schnellen und simplen Workaround zu finden, auch wenn diese außerhalb der Arduino IDE stattfinden. Unsere Lösungsvorschlag ist ein Python Script, welches in Spyder (Entwicklungsumgebung) ausgeführt wird. Die folgenden SChritte zeigen unseren Vorgang:
+- Download und Installation von Anaconda ([hier](https://www.anaconda.com/products/distribution) geht es zur Website)
+- Mit Anaconda wird automatisch Spyder installiert, was für die nachfolgenden Schritte geöffnet werden muss
+- Kopieren und fügen Sie den Code aus der Datei "Tastendrücke.py" aus dem Ordner "MovementClassifier" in Spyder ein
+
+Dieser Code dient im Allgemeinen dazu, serielle Daten, die von einem externen Gerät (in diesem Fall einem Arduino) gesendet werden, zu lesen und basierend auf diesen Daten Tastendrücke auf der Tastatur des Computers zu simulieren. Der Code wurde speziell für die Steuerung von TETRIS entwickelt und kann verwendet werden, um den Spielstein in verschiedene Richtungen zu bewegen und fallen zu lassen. Das Programm kann als Beispiel für die Verwendung von seriellen Schnittstellen und die Interaktion zwischen verschiedenen Geräten dienen, um bestimmte Aktionen auszuführen. Die Tasten, welche gedrückt werden sollen bei den verschiedenen Bewegungen können variabel angepasst werden, indem der Buchstabe in den Anführungszeichen verändert wird. Außerdem muss die "COM"-Schnittstelle gegebenfalls angepasst werden, je nach Arduinoboard.
+
+- Zunächst sollte der richtige Sketch von der Arduino IDE auf das Board hochgeladen werden
+- Schließen Sie die Arduino IDE danach
+- Nun können Sie den Code in Spyder ausführen
+- Nun sollten Sie in der Lage sein, mithilfe von Ihren Bewegungen virtuell Tastaturbefehle zu vollziehen
+
+[TETRIS im Browser](https://tetris.com/play-tetris) => Hier können Sie das Projekt ausprobieren und haben in den Einstellungen die Möglichkeit die Steuerung nach Belieben anzupassen und auf die Tasten aus dem Python Skript anzugleichen. Wir hoffen Sie können jetzt erfolgreich mit Beweungssteuerung TETRIS spielen und hatten ein wenig Spaß mit dem Arduino Board!
+
+Nachfolgend im letzten Kapitel finden Sie eine Zusammenfassung von den, bei uns aufgetretenen Problemen während des Projektes.
 
 
 ## 7. Trouble Shooting
