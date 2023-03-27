@@ -5,7 +5,7 @@ Am 21. April 1989 wurde in Japan der erste Gameboy veröffentlicht. Damals wurde
 Allerdings war TETRIS, obwohl es nur schwarz-weiß war in den neunziger Jahren unglaublich beliebt. 
 ![Tetris](readme_files/Tetris1.png)
 
-Heutzutage spielen nur noch sehr wenige Kinder TETRIS. Deshalb haben wir uns überlegt, TETRIS zu updaten um es wieder attraktiver werden zu lassen. Unsere Idee war, TETRIS über Handbewegungen mit einem Arduino Nano 33 BLE Sense zu steuern. Wie das genau aussehen soll, ist in diesem ([Video](https://www.youtube.com/watch?v=GfYRpADoRJY) zu sehen. 
+Heutzutage spielen nur noch sehr wenige Kinder TETRIS. Deshalb haben wir uns überlegt, TETRIS zu updaten um es wieder attraktiver werden zu lassen. Unsere Idee war, TETRIS über Handbewegungen mit einem Arduino Nano 33 BLE Sense zu steuern. Wie das genau aussehen soll, ist in diesem [Video](https://www.youtube.com/watch?v=GfYRpADoRJY) zu sehen. 
 
 ## Gliederung
 1. Vorbereitung der Arduino IDE
