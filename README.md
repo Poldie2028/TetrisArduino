@@ -5,8 +5,7 @@ Am 21. April 1989 wurde in Japan der erste Gameboy veröffentlicht. Damals wurde
 Allerdings war TETRIS, obwohl es nur schwarz-weiß war in den neunziger Jahren unglaublich beliebt. 
 ![Tetris](readme_files/Tetris1.png)
 
-Heutzutage spielen nur noch sehr wenige Kinder TETRIS. Deshalb haben wir uns überlegt, TETRIS zu updaten um es wieder attraktiver werden zu lassen. Unsere Idee war, TETRIS über Handbewegungen mit einem Arduino Nano 33 BLE Sense zu steuern. Wie das genau aussehen soll, ist in dem folgenden Video zu sehen. 
-![Gameplay](readme_files/Gameplay.mp4)
+Heutzutage spielen nur noch sehr wenige Kinder TETRIS. Deshalb haben wir uns überlegt, TETRIS zu updaten um es wieder attraktiver werden zu lassen. Unsere Idee war, TETRIS über Handbewegungen mit einem Arduino Nano 33 BLE Sense zu steuern. Wie das genau aussehen soll, ist in diesem ([Video](https://www.youtube.com/watch?v=GfYRpADoRJY) zu sehen. 
 
 ## Gliederung
 1. Vorbereitung der Arduino IDE
@@ -144,7 +143,7 @@ Nachfolgend im letzten Kapitel finden Sie eine Zusammenfassung von den, bei uns 
 
 
 ## 7. Trouble Shooting
-Wir haben versucht alle Probleme und Schwierigkeiten, die wir während des Projektes hatten in diesem Kapitel zusammenzufassen und aufzuzeigen wie wir damit umgegangen sind.
+Wir haben versucht alle Probleme und Schwierigkeiten, die wir während des Projektes hatten, in diesem Kapitel zusammenzufassen und aufzuzeigen wie wir damit umgegangen sind.
 
 ### 1. Schwierigkeiten mit den Libraries der Arduino IDE
 Bei der Istallation der IDE und der benötigen Libraries gab es direkt Schwierigkeiten bei uns, da wir einige nicht im Library Manager finden konnten. Daher folgen nun alle Libraries welche wir im Laufe des Projektes installiert haben, mit den Bezeichnung aus unserer Arduino IDE:
@@ -170,12 +169,12 @@ Wenn man das Aruinoboard mit seinem Computer per USB verbinden möchte, wird man
 ![SelectPort](readme_files/SelectPort.png)
 
 ### 3. Arduinoboard lässt sich nicht verbinden / Port wird nicht angezeigt
-Des Weiteren kam das Problem auf, das auch im Punkt 2 beschrieben Prozess kein Port ausgewählt werden konnte, weil der Comupter keinen erkennt. Dafür drücken sie den kleinen Knopf auf dem Board zwei mal schnell hintereinander. Daraufhin sollten zwei Lampen zu sehen sein und das Arduinoboard verbindet sich neu. Danach hatte sich das Problem bei uns gelöst und wir konnten mit dem Projekt fortfahren.
+Des Weiteren trat das Problem auf, dass der durch den in Punkt 2 beschriebene Prozess kein Port ausgewählt werden konnte, weil der Computer keinen erkennt. Wenn bei Ihnen das Problem auch auftreten sollte, dann drücken Sie den kleinen Knopf auf dem Board zwei mal schnell hintereinander. Daraufhin sollten zwei Lampen zu sehen sein und das Arduinoboard verbindet sich neu. Danach hatte sich das Problem bei uns gelöst und wir konnten mit dem Projekt fortfahren.
 
 ### 4. Die Bewegungsdaten vom Serial Monitor lassen sich nicht mit Strg+A kopieren
-Nachdem man Bewegungen aufgenommen hat, muss man diese für den weiteren Vorgang in einer CSV-Datei abspeichern. Allerdings konnten wir nicht alle Zeilen auf einmal kopieren, da nur die aktuell angezeigten Daten übernommen werden konnten. Wir konnten uns aus Zeitgründen keine effektivere Lösung überlgen und haben alle Daten manuell Stück für Stück kopiert und in die CSV-Datei eingefügt. Allerdings hat das bei über 1000 Zeilen pro Bewegungen viel Zeit in Anspruch genommen und war keine spannende Beschäftigung.
+Nachdem man Bewegungen aufgenommen hat, muss man diese für den weiteren Vorgang in einer CSV-Datei abspeichern. Allerdings konnten wir nicht alle Zeilen auf einmal kopieren, da nur die aktuell angezeigten Daten übernommen werden konnten. Wir konnten uns aus Zeitgründen keine effektivere Lösung überlegen und haben alle Daten manuell Stück für Stück kopiert und in die CSV-Datei eingefügt. Allerdings hat das bei über 1000 Zeilen pro Bewegungen viel Zeit in Anspruch genommen und war keine spannende Beschäftigung.
 
-Jedoch gibt es Möglichkeiten den Arduino output direkt in die CSV-Datei zu schreiben. Zum Beispiel konnten wir folgenden Konsolen-Befehl für Linux-Nutzer finden:
+Jedoch gibt es Möglichkeiten den Arduino Output direkt in die CSV-Datei zu schreiben. Zum Beispiel konnten wir folgenden Konsolen-Befehl für Linux-Nutzer finden:
 - `{$ cat /dev/cu.usbmodem[nnnnn] > sensorlog.csv}`
 
 ### 5. Tastaturbefehle mithilfer der Arduino IDE ausführen
