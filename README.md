@@ -146,7 +146,7 @@ Nachfolgend im letzten Kapitel finden Sie eine Zusammenfassung von den, bei uns 
 ## 7. Trouble Shooting
 Wir haben versucht alle Probleme und Schwierigkeiten, die wir während des Projektes hatten in diesem Kapitel zusammenzufassen und aufzuzeigen wie wir damit umgegangen sind.
 
-#### 1. Schwierigkeiten mit den Libraries der Arduino IDE
+### 1. Schwierigkeiten mit den Libraries der Arduino IDE
 Bei der Istallation der IDE und der benötigen Libraries gab es direkt Schwierigkeiten bei uns, da wir einige nicht im Library Manager finden konnten. Daher folgen nun alle Libraries welche wir im Laufe des Projektes installiert haben, mit den Bezeichnung aus unserer Arduino IDE:
 
 - Arduino_LSM9DS1
@@ -164,19 +164,19 @@ Bei der Istallation der IDE und der benötigen Libraries gab es direkt Schwierig
 
 Bei den Adafruit-Bibliotheken sind wir uns nicht sicher, ob diese für das Projekt gebraucht werden, allerdings wurden diese bei uns bereits vorinstalliert.
 
-#### 2. Schwierigkeiten bei der Auswahl vom Port
+### 2. Schwierigkeiten bei der Auswahl vom Port
 Wenn man das Aruinoboard mit seinem Computer per USB verbinden möchte, wird man von den Guides dazu aufgefordert den Port im Menü auszuwählen (Tools > Port > ...). Allerdings war dieser bei uns dauerhaft ausgegraut. Alternativ konnten wir das Feld rechts vom runden "Upload" Button anklicken und dort "Select other board and port..." auswählen, womit ein neues Fenster aufgerufen wird. Dort haben wir unser Board (Arduino Nano 33 BLE) gesucht und konnten hier zwischen den gefundenen Ports auswählen.
 
 ![SelectPort](readme_files/SelectPort.png)
 
-#### 3. Arduinoboard lässt sich nicht verbinden / Port wird nicht angezeigt
+### 3. Arduinoboard lässt sich nicht verbinden / Port wird nicht angezeigt
 Des Weiteren kam das Problem auf, das auch im Punkt 2 beschrieben Prozess kein Port ausgewählt werden konnte, weil der Comupter keinen erkennt. Dafür drücken sie den kleinen Knopf auf dem Board zwei mal schnell hintereinander. Daraufhin sollten zwei Lampen zu sehen sein und das Arduinoboard verbindet sich neu. Danach hatte sich das Problem bei uns gelöst und wir konnten mit dem Projekt fortfahren.
 
-#### 4. Die Bewegungsdaten vom Serial Monitor lassen sich nicht mit Strg+A kopieren
+### 4. Die Bewegungsdaten vom Serial Monitor lassen sich nicht mit Strg+A kopieren
 Nachdem man Bewegungen aufgenommen hat, muss man diese für den weiteren Vorgang in einer CSV-Datei abspeichern. Allerdings konnten wir nicht alle Zeilen auf einmal kopieren, da nur die aktuell angezeigten Daten übernommen werden konnten. Wir konnten uns aus Zeitgründen keine effektivere Lösung überlgen und haben alle Daten manuell Stück für Stück kopiert und in die CSV-Datei eingefügt. Allerdings hat das bei über 1000 Zeilen pro Bewegungen viel Zeit in Anspruch genommen und war keine spannende Beschäftigung.
 
 Jedoch gibt es Möglichkeiten den Arduino output direkt in die CSV-Datei zu schreiben. Zum Beispiel konnten wir folgenden Konsolen-Befehl für Linux-Nutzer finden:
 - `{$ cat /dev/cu.usbmodem[nnnnn] > sensorlog.csv}`
 
-#### 5. Tastaturbefehle mithilfer der Arduino IDE ausführen
+### 5. Tastaturbefehle mithilfer der Arduino IDE ausführen
 Unsere größte Schwierigkeit, war es die Tastaturbefehle ausführen zu können, nachdem wir die richtige Bewegung in der IDE erkannt haben.
