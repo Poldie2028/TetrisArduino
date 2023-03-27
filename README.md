@@ -189,3 +189,6 @@ Nach viel Recherche konnten wir es innerhalb unseres Projektes nicht mit der Ard
 
 ### 6. Bewegungen werden falsch erkannt
 Natürlich erkennt das Board nicht jede Bewegung korrekt. Grundsätzlich lässt sich sagen, umso mehr Trainingsdaten, desto genauer wird das fertige Model. Außerdem sollte man genau darauf achten, das Board jedes mal exakt gleich zu halten und ruckartige kurze Bewegungen zu machen. Mit 20 Wiederholungen pro Beweungen konnten am Ende circa 8/10 Bewegungen richtig erkannt werden, was uns für das kurze Projekt ausgereicht hat. 
+
+# Viel Spaß mit TETRIS
+![Ende](readme_files/Ende.png)
