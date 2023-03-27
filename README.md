@@ -126,7 +126,7 @@ Allerdings können in der Arduino IDE leider keine Tastenbefehle zugewiesen werd
 
 
 ## 6. Tastenzuweisung
-Um den Zeitrahmen von 2 Wochen für das Projekt nicht zu überreizen, haben wir versucht einen schnellen und simplen Workaround zu finden, auch wenn diese außerhalb der Arduino IDE stattfinden. Unsere Lösungsvorschlag ist ein Python Script, welches in Spyder (Entwicklungsumgebung) ausgeführt wird. Die folgenden SChritte zeigen unseren Vorgang:
+Um den Zeitrahmen von 2 Wochen für das Projekt nicht zu überreizen, haben wir versucht einen schnellen und simplen Workaround zu finden, auch wenn diese außerhalb der Arduino IDE stattfinden. Unsere Lösungsvorschlag ist ein Python Script, welches in Spyder (Entwicklungsumgebung) ausgeführt wird. Die folgenden Schritte zeigen unseren Vorgang:
 - Download und Installation von Anaconda ([hier](https://www.anaconda.com/products/distribution) geht es zur Website)
 - Mit Anaconda wird automatisch Spyder installiert, was für die nachfolgenden Schritte geöffnet werden muss
 - Kopieren und fügen Sie den Code aus der Datei "Tastendrücke.py" aus dem Ordner "MovementClassifier" in Spyder ein
@@ -179,4 +179,13 @@ Jedoch gibt es Möglichkeiten den Arduino output direkt in die CSV-Datei zu schr
 - `{$ cat /dev/cu.usbmodem[nnnnn] > sensorlog.csv}`
 
 ### 5. Tastaturbefehle mithilfer der Arduino IDE ausführen
-Unsere größte Schwierigkeit, war es die Tastaturbefehle ausführen zu können, nachdem wir die richtige Bewegung in der IDE erkannt haben.
+Unsere größte Schwierigkeit, war es die Tastaturbefehle ausführen zu können, nachdem wir die richtige Bewegung in der IDE erkannt haben. Leider sind die empfohlenen Bibliotheken nicht mir dem Arduino Nano 33 BLE kompatibel. 
+
+Beim inkludieren der Keyboard-Bibliothek bekommt man den Fehler "HID.h konnte nicht gefunden werden". Nach unserer Recherche kann diese Bibliothek nur mit einem Arduino Uno / Yun /Zero Board genutzt werden. Ansonsten wird man auf die USBKeyboard-Bibliothek verwiesen.
+
+Jedoch hat auch USBKeyboard leider nicht funktioniert. Jedes Mal wenn wir eine Instanz initialisieren wollten (`{USBKeyboard key;}`) brach die Verbindung zum Board ab und es musst, wie in Schritt 3 beschrieben neu verbunden werden.
+
+Nach viel Recherche konnten wir es innerhalb unseres Projektes nicht mit der Arduino IDE verwirklichen und haben aus zeitlichen Gründen auf die Python-Alternative zurückgegriffen.
+
+### 6. Bewegungen werden falsch erkannt
+Natürlich erkennt das Board nicht jede Bewegung korrekt. Grundsätzlich lässt sich sagen, umso mehr Trainingsdaten, desto genauer wird das fertige Model. Außerdem sollte man genau darauf achten, das Board jedes mal exakt gleich zu halten und ruckartige kurze Bewegungen zu machen. Mit 20 Wiederholungen pro Beweungen konnten am Ende circa 8/10 Bewegungen richtig erkannt werden, was uns für das kurze Projekt ausgereicht hat. 
